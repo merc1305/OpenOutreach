@@ -190,6 +190,7 @@ def promote_lead_to_contact(session, public_id: str):
         )
 
     lead.contact = contact
+    lead.disqualified = False
     lead.save()
 
     dept = session.campaign.department
